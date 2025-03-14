@@ -17,10 +17,12 @@ public class MetroTabCompleter implements TabCompleter {
     private final SmartMetro plugin;
     private final List<String> EMPTY_LIST = new ArrayList<>();
     private final List<String> MAIN_COMMANDS = Arrays.asList(
-            "create", "delete", "list", "language", "lang", "givemachine", "setstation", "setcategory"
+            "create", "delete", "list", "language", "lang", "givemachine", "setstation", "setcategory", "reload"
     );
     private final List<String> CREATE_TYPES = Arrays.asList("station", "switch");
     private final List<String> DELETE_TYPES = Arrays.asList("station", "switch");
+    private final List<String> LIST_TYPES = Arrays.asList("stations", "switch");
+    private final List<String> DIRECTIONS = Arrays.asList("north", "south", "east", "west");
 
     public MetroTabCompleter(SmartMetro plugin) {
         this.plugin = plugin;
@@ -28,12 +30,11 @@ public class MetroTabCompleter implements TabCompleter {
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
-        if (!(sender instanceof Player)) {
+        if (!(sender instanceof Player) && !args[0].equalsIgnoreCase("reload")) {
             return EMPTY_LIST;
         }
 
-        Player player = (Player) sender;
-        if (!player.hasPermission("metro.admin")) {
+        if (sender instanceof Player && !sender.hasPermission("metro.admin")) {
             return EMPTY_LIST;
         }
 
@@ -52,6 +53,9 @@ public class MetroTabCompleter implements TabCompleter {
                 case "delete":
                     suggestions.addAll(DELETE_TYPES);
                     break;
+                case "list":
+                    suggestions.addAll(LIST_TYPES);
+                    break;
                 case "language":
                 case "lang":
                     suggestions.addAll(plugin.getLocaleManager().getAvailableLocales().keySet());
@@ -69,15 +73,18 @@ public class MetroTabCompleter implements TabCompleter {
         } else if (args.length == 3) {
             // Third argument - depends on first and second arguments
             if (args[0].equalsIgnoreCase("create") && args[1].equalsIgnoreCase("switch")) {
-                // Suggest station IDs for destination
-                suggestions.addAll(getStationIds());
+                // Suggest directions for the switch
+                suggestions.addAll(DIRECTIONS);
             } else if (args[0].equalsIgnoreCase("create") && args[1].equalsIgnoreCase("station")) {
                 // For station name, we don't provide suggestions
                 return EMPTY_LIST;
             }
         } else if (args.length == 4) {
             // Fourth argument - depends on previous arguments
-            if (args[0].equalsIgnoreCase("create") && args[1].equalsIgnoreCase("station")) {
+            if (args[0].equalsIgnoreCase("create") && args[1].equalsIgnoreCase("switch")) {
+                // Suggest station IDs for destination
+                suggestions.addAll(getStationIds());
+            } else if (args[0].equalsIgnoreCase("create") && args[1].equalsIgnoreCase("station")) {
                 // Suggest existing categories
                 suggestions.addAll(getUniqueCategories());
             }

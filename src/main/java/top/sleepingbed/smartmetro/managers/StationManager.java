@@ -30,6 +30,9 @@ public class StationManager {
     }
     
     public void loadStations() {
+        stations.clear();
+        trackSwitches.clear();
+        
         FileConfiguration config = plugin.getConfigManager().getStationsConfig();
         ConfigurationSection stationsSection = config.getConfigurationSection("stations");
         
@@ -54,9 +57,29 @@ public class StationManager {
                 if (switchSection != null) {
                     UUID uuid = UUID.fromString(switchId);
                     Location location = (Location) switchSection.get("location");
-                    String destinationStation = switchSection.getString("destination");
                     
-                    TrackSwitch trackSwitch = new TrackSwitch(uuid, location, destinationStation);
+                    TrackSwitch trackSwitch = new TrackSwitch(uuid, location);
+                    
+                    // Load direction destinations
+                    ConfigurationSection directionsSection = switchSection.getConfigurationSection("directions");
+                    if (directionsSection != null) {
+                        for (String direction : directionsSection.getKeys(false)) {
+                            // Check if it's a list or a single value
+                            if (directionsSection.isList(direction)) {
+                                List<String> destinations = directionsSection.getStringList(direction);
+                                for (String destinationId : destinations) {
+                                    trackSwitch.addDestination(direction, destinationId);
+                                }
+                            } else {
+                                // For backward compatibility with old format
+                                String destinationId = directionsSection.getString(direction);
+                                if (destinationId != null) {
+                                    trackSwitch.addDestination(direction, destinationId);
+                                }
+                            }
+                        }
+                    }
+                    
                     trackSwitches.put(uuid, trackSwitch);
                 }
             }
@@ -82,7 +105,11 @@ public class StationManager {
         for (TrackSwitch trackSwitch : trackSwitches.values()) {
             String path = "track-switches." + trackSwitch.getId().toString();
             config.set(path + ".location", trackSwitch.getLocation());
-            config.set(path + ".destination", trackSwitch.getDestinationStation());
+            
+            // Save direction destinations
+            for (Map.Entry<String, List<String>> entry : trackSwitch.getDirectionDestinations().entrySet()) {
+                config.set(path + ".directions." + entry.getKey(), entry.getValue());
+            }
         }
         
         plugin.getConfigManager().saveStationsConfig(config);

@@ -1,0 +1,106 @@
+# Classical Chinese language file for SmartMetro
+
+locale:
+  name: "文言"
+
+gui:
+  vending_machine:
+    title: "§8售票之器"
+    info: "§e§l資訊"
+    current_station: "§7今所在站：§f%s"
+    click_to_get: "§a§l點而取票"
+    category: "§7類：§f%s"
+
+ticket:
+  name: "§6§l地鐵之票"
+  from: "§7發：§f%s"
+  to: "§7至：§f%s"
+  usage: "§a§o右擊軌以用"
+  received: "§a§l汝得 §f%s §a§l之票。"
+  inventory_full: "§e§l汝得 §f%s §e§l之票，然囊已滿。"
+  invalid: "§c§l此票無效。"
+
+minecart:
+  heading: "§a§l汝之車行 §f%s§a§l。"
+  arrived: "§6§l汝已至 §f%s§6§l。"
+  passing_station: "§7§o過站：§f%s"
+
+command:
+  help:
+    title: "§6§l=== 地鐵之命 ==="
+    create_station: "§e/metro create station <名> [類] §7- 創站於此"
+    create_switch: "§e/metro create switch <向> <至> §7- 創轉軌於此"
+    delete_station: "§e/metro delete station §7- 刪近站"
+    delete_switch: "§e/metro delete switch §7- 刪轉軌"
+    delete_switch_direction: "§e/metro delete switch <向> <至> §7- 刪特定向之至"
+    list: "§e/metro list §7- 列諸站"
+    list_switch: "§e/metro list switch §7- 列所視轉軌之諸向"
+    language: "§e/metro language <語碼> §7- 易語"
+    givemachine: "§e/metro givemachine <站ID> §7- 得售票器"
+    setstation: "§e/metro setstation <站ID> §7- 設活軌為下車站"
+    setcategory: "§e/metro setcategory <類> §7- 設近站之類"
+    reload: "§e/metro reload §7- 重載"
+
+  error:
+    player_only: "§c§l此命唯玩家可用。"
+    no_permission: "§c§l汝無權用此命。"
+    usage_create: "§c用法：§f/metro create <station|switch> [名]"
+    usage_create_station: "§c用法：§f/metro create station <名> [類]"
+    usage_create_switch: "§c用法：§f/metro create switch <向> <至>"
+    usage_delete: "§c用法：§f/metro delete <station|switch>"
+    usage_language: "§c用法：§f/metro language <語碼>"
+    usage_givemachine: "§c用法：§f/metro givemachine <站ID>"
+    invalid_type: "§c§l無效類。用 'station' 或 'switch'。"
+    invalid_direction: "§c§l無效向。"
+    usage_setstation: "§c用法：§f/metro setstation <站ID>"
+    usage_setcategory: "§c用法：§f/metro setcategory <類>"
+    not_activator_rail: "§c§l須視活軌。"
+    not_rail: "§c§l須視軌（任類）。"
+    cannot_set_data: "§c§l不能設此塊之數。"
+
+language_changed: "§a§l語已易。"
+language:
+  available: "§6§l可用語："
+  usage: "§7用 §f/metro language <語碼> §7以易語"
+
+setstation:
+  success: "§a§l此活軌今設為站：§f%s"
+
+station:
+  created: "§a§l站 §f'%s' §a§l已創，ID：§f%s"
+  created_with_category: "§a§l站 §f'%s' §a§l已創，ID：§f%s §a§l（類：§f%s§a§l）"
+  deleted: "§a§l站 §f'%s' §a§l已刪。"
+  not_found: "§c§l近無站。"
+  not_found_id: "§c§l無ID為 §f'%s' §c§l之站。"
+  list_title: "§6§l=== 地鐵站 ==="
+  category_updated: "§a§l站 §f'%s' §a§l之類自 §f'%s' §a§l易為 §f'%s'§a§l。"
+
+switch:
+  created: "§a§l已創指 §f'%s' §a§l之轉軌。"
+  direction_set: "§a§l向 §f'%s' §a§l今指站 §f'%s'§a§l。"
+  deleted: "§a§l轉軌已刪。"
+  not_found: "§c§l此無轉軌。"
+  destination_not_found: "§c§l無ID為 §f'%s' §c§l之至站。"
+  directions_title: "§6§l=== 轉軌向 ==="
+  no_directions: "§7此轉軌無設向。"
+  current_shape: "§7當前軌形"
+  possible_directions: "§7可能向"
+  direction_destination_not_found: "§c§l向 §f'%s' §c§l不指站 §f'%s'§c§l。"
+  direction_destination_deleted: "§a§l已自向 §f'%s' §a§l刪站 §f'%s'§a§l。"
+
+vending_machine:
+  name: "§6§l售票之器"
+  bound_to: "§7繫於站：§f%s"
+  category: "§7類：§f%s"
+  place_instruction: "§a§o置於站近"
+  placed: "§a§l售票器已置，繫於站：§f%s"
+  given: "§a§l汝得一繫於站 §f%s §a§l之售票器"
+  dropped: "§e§l汝得一繫於站 §f%s §e§l之售票器，然囊已滿"
+  creation_failed: "§c§l創售票器失敗"
+
+error:
+  no_station_near_vending: "§c§l誤：此售票器近無站。"
+  destination_not_found: "§c§l誤：無至站。"
+  invalid_station: "§c§l誤：無效站選。"
+  different_category: "§c§l誤：不能買異類站間之票。"
+
