@@ -1,0 +1,86 @@
+# English (US) language file for SmartMetro
+
+locale:
+  name: "English (US)"
+
+gui:
+  vending_machine:
+    title: "Ticket Vending Machine"
+    info: "Information"
+    current_station: "Current Station: %s"
+    click_to_get: "Click to get a ticket"
+
+ticket:
+  name: "Metro Ticket"
+  from: "From: %s"
+  to: "To: %s"
+  usage: "Right-click on a rail to use"
+  received: "You received a ticket to %s."
+  inventory_full: "You received a ticket to %s, but your inventory was full."
+  invalid: "This ticket is invalid."
+
+minecart:
+  heading: "Your minecart is now heading to %s."
+  arrived: "You have arrived at %s."
+
+command:
+  help:
+    title: "=== SmartMetro Commands ==="
+    create_station: "/metro create station <name> - Create a station at your location"
+    create_switch: "/metro create switch <destination> - Create a track switch at your location"
+    delete_station: "/metro delete station - Delete the station at your location"
+    delete_switch: "/metro delete switch - Delete the track switch at your location"
+    list: "/metro list - List all stations"
+    language: "/metro language <locale> - Change your language"
+    givemachine: "/metro givemachine <stationID> - Get a ticket machine bound to the specified station"
+    setstation: "/metro setstation <stationID> - Set an Activator Rail to a station for automatic disembarking"
+
+  error:
+    player_only: "This command can only be used by players."
+    no_permission: "You don't have permission to use this command."
+    usage_create: "Usage: /metro create <station|switch> [name]"
+    usage_create_station: "Usage: /metro create station <name>"
+    usage_create_switch: "Usage: /metro create switch <destination>"
+    usage_delete: "Usage: /metro delete <station|switch>"
+    usage_language: "Usage: /metro language <locale>"
+    usage_givemachine: "Usage: /metro givemachine <stationID>"
+    invalid_type: "Invalid type. Use 'station' or 'switch'."
+    usage_setstation: "Usage: /metro setstation <stationID>"
+    not_activator_rail: "You must be looking at an Activator Rail."
+    cannot_set_data: "Cannot set data on this block."
+  
+  language_changed: "Language changed successfully."
+  language:
+    available: "Available languages:"
+    usage: "Use /metro language <locale> to change your language"
+
+  setstation:
+    success: "This Activator Rail is now set to station: %s"
+
+station:
+  created: "Station '%s' created with ID: %s"
+  deleted: "Station '%s' deleted."
+  not_found: "No station found near your location."
+  not_found_id: "No station found with ID '%s'."
+  list_title: "=== Metro Stations ==="
+
+switch:
+  created: "Track switch created pointing to '%s'."
+  deleted: "Track switch deleted."
+  not_found: "No track switch found at your location."
+  destination_not_found: "Destination station with ID '%s' not found."
+
+vending_machine:
+  name: "Ticket Vending Machine"
+  bound_to: "Bound to station: %s"
+  place_instruction: "Place near a station"
+  placed: "Vending machine placed, bound to station: %s"
+  given: "You received a vending machine bound to station %s"
+  dropped: "You received a vending machine bound to station %s, but your inventory was full"
+  creation_failed: "Failed to create vending machine"
+
+error:
+  no_station_near_vending: "Error: No station found near this vending machine."
+  destination_not_found: "Error: Destination station not found."
+  invalid_station: "Error: Invalid station selection."
+

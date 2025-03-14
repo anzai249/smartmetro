@@ -1,0 +1,78 @@
+# Spanish language file for SmartMetro
+
+locale:
+  name: "Español"
+
+gui:
+  vending_machine:
+    title: "Máquina expendedora de billetes"
+    info: "Información"
+    current_station: "Estación actual: %s"
+    click_to_get: "Haz clic para obtener un billete"
+
+ticket:
+  name: "Billete de metro"
+  from: "Desde: %s"
+  to: "Hasta: %s"
+  usage: "Haz clic derecho en un raíl para usar"
+  received: "Has recibido un billete para %s."
+  inventory_full: "Has recibido un billete para %s, pero tu inventario está lleno."
+  invalid: "Este billete no es válido."
+
+minecart:
+  heading: "Tu vagoneta se dirige a %s."
+
+command:
+  help:
+    title: "=== Comandos del sistema de metro ==="
+    create_station: "/metro create station <nombre> - Crear una estación en tu ubicación"
+    create_switch: "/metro create switch <destino> - Crear un cambio de vía en tu ubicación"
+    delete_station: "/metro delete station - Eliminar la estación cercana"
+    delete_switch: "/metro delete switch - Eliminar el cambio de vía en tu ubicación"
+    list: "/metro list - Listar todas las estaciones"
+    language: "/metro language <código de idioma> - Cambiar tu idioma"
+    givemachine: "/metro givemachine <ID de estación> - Obtener una máquina expendedora vinculada a la estación especificada"
+
+  error:
+    player_only: "Este comando solo puede ser usado por jugadores."
+    no_permission: "No tienes permiso para usar este comando."
+    usage_create: "Uso: /metro create <station|switch> [nombre]"
+    usage_create_station: "Uso: /metro create station <nombre>"
+    usage_create_switch: "Uso: /metro create switch <destino>"
+    usage_delete: "Uso: /metro delete <station|switch>"
+    usage_language: "Uso: /metro language <código de idioma>"
+    usage_givemachine: "Uso: /metro givemachine <ID de estación>"
+    invalid_type: "Tipo inválido. Usa 'station' o 'switch'."
+  
+  language_changed: "Idioma cambiado con éxito."
+  language:
+    available: "Idiomas disponibles:"
+    usage: "Usa /metro language <código de idioma> para cambiar tu idioma"
+
+station:
+  created: "Estación '%s' creada con ID: %s"
+  deleted: "Estación '%s' eliminada."
+  not_found: "No se encontró ninguna estación cerca de tu ubicación."
+  not_found_id: "No se encontró ninguna estación con ID '%s'."
+  list_title: "=== Estaciones de metro ==="
+
+switch:
+  created: "Cambio de vía creado apuntando a '%s'."
+  deleted: "Cambio de vía eliminado."
+  not_found: "No se encontró ningún cambio de vía en tu ubicación."
+  destination_not_found: "No se encontró la estación de destino con ID '%s'."
+
+vending_machine:
+  name: "Máquina expendedora"
+  bound_to: "Vinculada a la estación: %s"
+  place_instruction: "Colócala cerca de una estación"
+  placed: "Máquina expendedora colocada, vinculada a la estación: %s"
+  given: "Has recibido una máquina expendedora vinculada a la estación %s"
+  dropped: "Has recibido una máquina expendedora vinculada a la estación %s, pero tu inventario está lleno"
+  creation_failed: "Error al crear la máquina expendedora"
+
+error:
+  no_station_near_vending: "Error: No se encontró ninguna estación cerca de esta máquina expendedora."
+  destination_not_found: "Error: No se encontró la estación de destino."
+  invalid_station: "Error: Selección de estación inválida."
+

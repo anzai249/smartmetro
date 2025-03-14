@@ -1,0 +1,78 @@
+# German language file for SmartMetro
+
+locale:
+  name: "Deutsch"
+
+gui:
+  vending_machine:
+    title: "Fahrkartenautomaten"
+    info: "Information"
+    current_station: "Aktuelle Station: %s"
+    click_to_get: "Klicken Sie, um ein Ticket zu erhalten"
+
+ticket:
+  name: "U-Bahn-Ticket"
+  from: "Von: %s"
+  to: "Nach: %s"
+  usage: "Rechtsklick auf eine Schiene zum Benutzen"
+  received: "Sie haben ein Ticket nach %s erhalten."
+  inventory_full: "Sie haben ein Ticket nach %s erhalten, aber Ihr Inventar ist voll."
+  invalid: "Dieses Ticket ist ungültig."
+
+minecart:
+  heading: "Ihr Minecart fährt nach %s."
+
+command:
+  help:
+    title: "=== U-Bahn-System-Befehle ==="
+    create_station: "/metro create station <Name> - Erstellt eine Station an Ihrer Position"
+    create_switch: "/metro create switch <Ziel> - Erstellt eine Weiche an Ihrer Position"
+    delete_station: "/metro delete station - Löscht die nächstgelegene Station"
+    delete_switch: "/metro delete switch - Löscht die Weiche an Ihrer Position"
+    list: "/metro list - Listet alle Stationen auf"
+    language: "/metro language <Sprachcode> - Ändert Ihre Sprache"
+    givemachine: "/metro givemachine <Stations-ID> - Erhalten Sie einen Fahrkartenautomaten, der an die angegebene Station gebunden ist"
+
+  error:
+    player_only: "Dieser Befehl kann nur von Spielern verwendet werden."
+    no_permission: "Sie haben keine Berechtigung, diesen Befehl zu verwenden."
+    usage_create: "Verwendung: /metro create <station|switch> [Name]"
+    usage_create_station: "Verwendung: /metro create station <Name>"
+    usage_create_switch: "Verwendung: /metro create switch <Ziel>"
+    usage_delete: "Verwendung: /metro delete <station|switch>"
+    usage_language: "Verwendung: /metro language <Sprachcode>"
+    usage_givemachine: "Verwendung: /metro givemachine <Stations-ID>"
+    invalid_type: "Ungültiger Typ. Verwenden Sie 'station' oder 'switch'."
+  
+  language_changed: "Sprache erfolgreich geändert."
+  language:
+    available: "Verfügbare Sprachen:"
+    usage: "Verwenden Sie /metro language <Sprachcode>, um Ihre Sprache zu ändern"
+
+station:
+  created: "Station '%s' erstellt mit ID: %s"
+  deleted: "Station '%s' gelöscht."
+  not_found: "Keine Station in der Nähe Ihrer Position gefunden."
+  not_found_id: "Keine Station mit der ID '%s' gefunden."
+  list_title: "=== U-Bahn-Stationen ==="
+
+switch:
+  created: "Weiche erstellt, die auf '%s' zeigt."
+  deleted: "Weiche gelöscht."
+  not_found: "Keine Weiche an Ihrer Position gefunden."
+  destination_not_found: "Zielstation mit ID '%s' nicht gefunden."
+
+vending_machine:
+  name: "Fahrkartenautomat"
+  bound_to: "Gebunden an Station: %s"
+  place_instruction: "In der Nähe einer Station platzieren"
+  placed: "Fahrkartenautomat platziert, gebunden an Station: %s"
+  given: "Sie haben einen Fahrkartenautomaten erhalten, der an Station %s gebunden ist"
+  dropped: "Sie haben einen Fahrkartenautomaten erhalten, der an Station %s gebunden ist, aber Ihr Inventar ist voll"
+  creation_failed: "Erstellung des Fahrkartenautomaten fehlgeschlagen"
+
+error:
+  no_station_near_vending: "Fehler: Keine Station in der Nähe dieses Fahrkartenautomaten gefunden."
+  destination_not_found: "Fehler: Zielstation nicht gefunden."
+  invalid_station: "Fehler: Ungültige Stationsauswahl."
+

@@ -1,0 +1,78 @@
+# French language file for SmartMetro
+
+locale:
+  name: "Français"
+
+gui:
+  vending_machine:
+    title: "Distributeur de billets"
+    info: "Information"
+    current_station: "Station actuelle : %s"
+    click_to_get: "Cliquez pour obtenir un billet"
+
+ticket:
+  name: "Billet de métro"
+  from: "De : %s"
+  to: "À : %s"
+  usage: "Clic droit sur un rail pour utiliser"
+  received: "Vous avez reçu un billet pour %s."
+  inventory_full: "Vous avez reçu un billet pour %s, mais votre inventaire est plein."
+  invalid: "Ce billet n'est pas valide."
+
+minecart:
+  heading: "Votre wagonnet se dirige vers %s."
+
+command:
+  help:
+    title: "=== Commandes du système de métro ==="
+    create_station: "/metro create station <nom> - Créer une station à votre position"
+    create_switch: "/metro create switch <destination> - Créer un aiguillage à votre position"
+    delete_station: "/metro delete station - Supprimer la station proche"
+    delete_switch: "/metro delete switch - Supprimer l'aiguillage à votre position"
+    list: "/metro list - Lister toutes les stations"
+    language: "/metro language <code de langue> - Changer votre langue"
+    givemachine: "/metro givemachine <ID de station> - Obtenir un distributeur lié à la station spécifiée"
+
+  error:
+    player_only: "Cette commande ne peut être utilisée que par les joueurs."
+    no_permission: "Vous n'avez pas la permission d'utiliser cette commande."
+    usage_create: "Utilisation : /metro create <station|switch> [nom]"
+    usage_create_station: "Utilisation : /metro create station <nom>"
+    usage_create_switch: "Utilisation : /metro create switch <destination>"
+    usage_delete: "Utilisation : /metro delete <station|switch>"
+    usage_language: "Utilisation : /metro language <code de langue>"
+    usage_givemachine: "Utilisation : /metro givemachine <ID de station>"
+    invalid_type: "Type invalide. Utilisez 'station' ou 'switch'."
+  
+  language_changed: "Langue changée avec succès."
+  language:
+    available: "Langues disponibles :"
+    usage: "Utilisez /metro language <code de langue> pour changer votre langue"
+
+station:
+  created: "Station '%s' créée avec l'ID : %s"
+  deleted: "Station '%s' supprimée."
+  not_found: "Aucune station trouvée près de votre position."
+  not_found_id: "Aucune station trouvée avec l'ID '%s'."
+  list_title: "=== Stations de métro ==="
+
+switch:
+  created: "Aiguillage créé pointant vers '%s'."
+  deleted: "Aiguillage supprimé."
+  not_found: "Aucun aiguillage trouvé à votre position."
+  destination_not_found: "Station de destination avec l'ID '%s' non trouvée."
+
+vending_machine:
+  name: "Distributeur de billets"
+  bound_to: "Lié à la station : %s"
+  place_instruction: "Placez-le près d'une station"
+  placed: "Distributeur placé, lié à la station : %s"
+  given: "Vous avez reçu un distributeur lié à la station %s"
+  dropped: "Vous avez reçu un distributeur lié à la station %s, mais votre inventaire est plein"
+  creation_failed: "Échec de la création du distributeur"
+
+error:
+  no_station_near_vending: "Erreur : Aucune station trouvée près de ce distributeur."
+  destination_not_found: "Erreur : Station de destination non trouvée."
+  invalid_station: "Erreur : Sélection de station invalide."
+

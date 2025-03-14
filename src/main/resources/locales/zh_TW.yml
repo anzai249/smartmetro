@@ -1,0 +1,86 @@
+# Chinese (Traditional) language file for SmartMetro
+
+locale:
+  name: "繁體中文"
+
+gui:
+  vending_machine:
+    title: "售票機"
+    info: "資訊"
+    current_station: "當前站點: %s"
+    click_to_get: "點擊獲取車票"
+
+ticket:
+  name: "地鐵票"
+  from: "出發站: %s"
+  to: "目的站: %s"
+  usage: "右鍵點擊軌道使用"
+  received: "你獲得了前往 %s 的車票。"
+  inventory_full: "你獲得了前往 %s 的車票，但你的背包已滿。"
+  invalid: "這張車票無效。"
+
+minecart:
+  heading: "你的礦車正在前往 %s。"
+  arrived: "你已到達 %s。"
+
+command:
+  help:
+    title: "=== 地鐵系統命令 ==="
+    create_station: "/metro create station <名稱> - 在你的位置創建一個站點"
+    create_switch: "/metro create switch <目的地> - 在你的位置創建一個軌道開關"
+    delete_station: "/metro delete station - 刪除你位置附近的站點"
+    delete_switch: "/metro delete switch - 刪除你位置的軌道開關"
+    list: "/metro list - 列出所有站點"
+    language: "/metro language <語言代碼> - 更改你的語言"
+    givemachine: "/metro givemachine <站點ID> - 獲取一個綁定到指定站點的售票機"
+    setstation: "/metro setstation <站點ID> - 將激活鐵軌設置為自動下車的站點"
+
+  error:
+    player_only: "此命令只��由玩家使用。"
+    no_permission: "你沒有權限使用此命令。"
+    usage_create: "用法: /metro create <station|switch> [名稱]"
+    usage_create_station: "用法: /metro create station <名稱>"
+    usage_create_switch: "用法: /metro create switch <目的地>"
+    usage_delete: "用法: /metro delete <station|switch>"
+    usage_language: "用法: /metro language <語言代碼>"
+    usage_givemachine: "用法: /metro givemachine <站點ID>"
+    invalid_type: "無效類型。使用 'station' 或 'switch'。"
+    usage_setstation: "用法: /metro setstation <站點ID>"
+    not_activator_rail: "你必須看著一個激活鐵軌。"
+    cannot_set_data: "無法在此方塊上設置數據。"
+  
+  language_changed: "語言已成功更改。"
+  language:
+    available: "可用語言:"
+    usage: "使用 /metro language <語言代碼> 來更改你的語言"
+
+  setstation:
+    success: "此激活鐵軌現在設置為站點: %s"
+
+station:
+  created: "站點 '%s' 已創建，ID: %s"
+  deleted: "站點 '%s' 已刪除。"
+  not_found: "在你的位置附近找不到站點。"
+  not_found_id: "找不到ID為 '%s' 的站點。"
+  list_title: "=== 地鐵站點 ==="
+
+switch:
+  created: "已創建指向 '%s' 的軌道開關。"
+  deleted: "軌道開關已刪除。"
+  not_found: "在你的位置找不到軌道開關。"
+  destination_not_found: "找不到ID為 '%s' 的目的地站點。"
+
+vending_machine:
+  name: "售票機"
+  bound_to: "綁定到站點: %s"
+  place_instruction: "放置在站點附近"
+  placed: "售票機已放置，綁定到站點: %s"
+  given: "你獲得了一個綁定到站點 %s 的售票機"
+  dropped: "你獲得了一個綁定到站點 %s 的售票機，但你的背包已滿"
+  creation_failed: "創建售票機失敗"
+
+error:
+  no_station_near_vending: "錯誤: 在此售票機附近找不到站點。"
+  destination_not_found: "錯誤: 找不到目的地站點。"
+  invalid_station: "錯誤: 無效的站點選擇。"
+

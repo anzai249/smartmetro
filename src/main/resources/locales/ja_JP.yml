@@ -1,0 +1,78 @@
+# Japanese language file for SmartMetro
+
+locale:
+  name: "日本語"
+
+gui:
+  vending_machine:
+    title: "券売機"
+    info: "情報"
+    current_station: "現在の駅: %s"
+    click_to_get: "クリックして切符を入手"
+
+ticket:
+  name: "地下鉄切符"
+  from: "出発駅: %s"
+  to: "目的駅: %s"
+  usage: "レールを右クリックして使用"
+  received: "%s 行きの切符を入手しました。"
+  inventory_full: "%s 行きの切符を入手しましたが、インベントリがいっぱいです。"
+  invalid: "この切符は無効です。"
+
+minecart:
+  heading: "トロッコは %s に向かっています。"
+
+command:
+  help:
+    title: "=== 地下鉄システムコマンド ==="
+    create_station: "/metro create station <名前> - 現在位置に駅を作成"
+    create_switch: "/metro create switch <目的地> - 現在位置に線路切り替えを作成"
+    delete_station: "/metro delete station - 近くの駅を削除"
+    delete_switch: "/metro delete switch - 現在位置の線路切り替えを削除"
+    list: "/metro list - すべての駅を一覧表示"
+    language: "/metro language <言語コード> - 言語を変更"
+    givemachine: "/metro givemachine <駅ID> - 指定した駅に紐づく券売機を入手"
+
+  error:
+    player_only: "このコマンドはプレイヤーのみ使用できます。"
+    no_permission: "このコマンドを使用する権限がありません。"
+    usage_create: "使用法: /metro create <station|switch> [名前]"
+    usage_create_station: "使用法: /metro create station <名前>"
+    usage_create_switch: "使用法: /metro create switch <目的地>"
+    usage_delete: "使用法: /metro delete <station|switch>"
+    usage_language: "使用法: /metro language <言語コード>"
+    usage_givemachine: "使用法: /metro givemachine <駅ID>"
+    invalid_type: "無効なタイプです。'station'または'switch'を使用してください。"
+  
+  language_changed: "言語が変更されました。"
+  language:
+    available: "利用可能な言語:"
+    usage: "言語を変更するには /metro language <言語コード> を使用してください"
+
+station:
+  created: "駅 '%s' が作成されました。ID: %s"
+  deleted: "駅 '%s' が削除されました。"
+  not_found: "近くに駅が見つかりません。"
+  not_found_id: "ID '%s' の駅が見つかりません。"
+  list_title: "=== 地下鉄駅一覧 ==="
+
+switch:
+  created: "'%s' に向かう線路切り替えが作成されました。"
+  deleted: "線路切り替えが削除されました。"
+  not_found: "現在位置に線路切り替えが見つかりません。"
+  destination_not_found: "ID '%s' の目的地駅が見つかりません。"
+
+vending_machine:
+  name: "券売機"
+  bound_to: "紐づけられた駅: %s"
+  place_instruction: "駅の近くに設置してください"
+  placed: "券売機が設置されました。紐づけられた駅: %s"
+  given: "駅 %s に紐づけられた券売機を入手しました"
+  dropped: "駅 %s に紐づけられた券売機を入手しましたが、インベントリがいっぱいです"
+  creation_failed: "券売機の作成に失敗しました"
+
+error:
+  no_station_near_vending: "エラー: この券売機の近くに駅が見つかりません。"
+  destination_not_found: "エラー: 目的地駅が見つかりません。"
+  invalid_station: "エラー: 無効な駅選択です。"
+

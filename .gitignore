@@ -1,0 +1,81 @@
+# 编译输出
+/build/
+!gradle-wrapper.jar
+
+# IDE 相关文件
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+*.swn
+
+# Eclipse 相关文件
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Gradle 相关
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle-cache/
+out/
+
+# 日志和临时文件
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.swn
+
+# 依赖包
+/lib/
+*.jar
+*.war
+*.ear
+
+# 本地配置
+local.properties
+*.keystore
+
+# Kotlin 编译文件
+*.kotlin_module
+
+# Java 编译文件
+*.class
+
+# Android 相关
+/captures/
+/output.json
+/.cxx/
+*.hprof
+*.so
+*.obj
+*.o
+*.lock
+
+# 生成的 JSON Schema
+*.json
+
+# Lombok 相关
+.lombok/
+
+# Node.js (如果有前端相关代码)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# 远程缓存
+*.gradle.kts.cache/

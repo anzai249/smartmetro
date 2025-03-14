@@ -1,0 +1,78 @@
+# Korean language file for SmartMetro
+
+locale:
+  name: "한국어"
+
+gui:
+  vending_machine:
+    title: "발권기"
+    info: "정보"
+    current_station: "현재 역: %s"
+    click_to_get: "클릭하여 티켓 받기"
+
+ticket:
+  name: "지하철 티켓"
+  from: "출발역: %s"
+  to: "도착역: %s"
+  usage: "레일에 우클릭하여 사용"
+  received: "%s 행 티켓을 받았습니다."
+  inventory_full: "%s 행 티켓을 받았지만 인벤토리가 가득 찼습니다."
+  invalid: "이 티켓은 유효하지 않습니다."
+
+minecart:
+  heading: "광산 수레가 %s(으)로 향하고 있습니다."
+
+command:
+  help:
+    title: "=== 지하철 시스템 명령어 ==="
+    create_station: "/metro create station <이름> - 현재 위치에 역 생성"
+    create_switch: "/metro create switch <목적지> - 현재 위치에 선로 전환기 생성"
+    delete_station: "/metro delete station - 가까운 역 삭제"
+    delete_switch: "/metro delete switch - 현재 위치의 선로 전환기 삭제"
+    list: "/metro list - 모든 역 목록 보기"
+    language: "/metro language <언어 코드> - 언어 변경"
+    givemachine: "/metro givemachine <역ID> - 지정된 역에 연결된 발권기 받기"
+
+  error:
+    player_only: "이 명령어는 플레이어만 사용할 수 있습니다."
+    no_permission: "이 명령어를 사용할 권한이 없습니다."
+    usage_create: "사용법: /metro create <station|switch> [이름]"
+    usage_create_station: "사용법: /metro create station <이름>"
+    usage_create_switch: "사용법: /metro create switch <목적지>"
+    usage_delete: "사용법: /metro delete <station|switch>"
+    usage_language: "사용법: /metro language <언어 코드>"
+    usage_givemachine: "사용법: /metro givemachine <역ID>"
+    invalid_type: "잘못된 유형입니다. 'station' 또는 'switch'를 사용하세요."
+  
+  language_changed: "언어가 변경되었습니다."
+  language:
+    available: "사용 가능한 언어:"
+    usage: "언어를 변경하려면 /metro language <언어 코드>를 사용하세요"
+
+station:
+  created: "역 '%s'이(가) 생성되었습니다. ID: %s"
+  deleted: "역 '%s'이(가) 삭제되었습니다."
+  not_found: "가까운 곳에 역이 없습니다."
+  not_found_id: "ID가 '%s'인 역을 찾을 수 없습니다."
+  list_title: "=== 지하철 역 목록 ==="
+
+switch:
+  created: "'%s'(으)로 향하는 선로 전환기가 생성되었습니다."
+  deleted: "선로 전환기가 삭제되었습니다."
+  not_found: "현재 위치에 선로 전환기가 없습니다."
+  destination_not_found: "ID가 '%s'인 목적지 역을 찾을 수 없습니다."
+
+vending_machine:
+  name: "발권기"
+  bound_to: "연결된 역: %s"
+  place_instruction: "역 근처에 설치하세요"
+  placed: "발권기가 설치되었습니다. 연결된 역: %s"
+  given: "%s 역에 연결된 발권기를 받았습니다"
+  dropped: "%s 역에 연결된 발권기를 받았지만 인벤토리가 가득 찼습니다"
+  creation_failed: "발권기 생성에 실패했습니다"
+
+error:
+  no_station_near_vending: "오류: 이 발권기 근처에 역이 없습니다."
+  destination_not_found: "오류: 목적지 역을 찾을 수 없습니다."
+  invalid_station: "오류: 잘못된 역 선택입니다."
+

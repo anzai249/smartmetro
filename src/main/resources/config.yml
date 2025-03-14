@@ -1,0 +1,17 @@
+# SmartMetro Configuration
+
+# Ticket settings
+ticket:
+  # Material to use for tickets
+  material: PAPER
+
+# Vending machine settings
+vending-machine:
+  # Player name for the vending machine head skin
+  skin: CONSOLE
+  
+# Locale settings
+locale:
+  # Default locale
+  default: en_US
+

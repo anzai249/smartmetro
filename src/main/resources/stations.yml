@@ -1,0 +1,13 @@
+# SmartMetro Stations Configuration
+stations:
+  # Format:
+  # station_id:
+  #   name: Station Name
+  #   location: world,x,y,z
+
+track-switches:
+  # Format:
+  # switch_uuid:
+  #   location: world,x,y,z
+  #   destination: station_id
+

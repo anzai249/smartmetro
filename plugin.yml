@@ -1,0 +1,18 @@
+name: SmartMetro
+version: 1.0
+main: top.sleepingbed.smartmetro.SmartMetro
+api-version: 1.21
+description: An automatic track-switching metro system with ticket vending machines
+commands:
+  metro:
+    description: Main command for the metro system
+    usage: /metro <create|delete|list|language|givemachine|setstation>
+    permission: metro.admin
+permissions:
+  metro.admin:
+    description: Allows access to administrative metro commands
+    default: op
+  metro.use:
+    description: Allows usage of the metro system
+    default: true
+

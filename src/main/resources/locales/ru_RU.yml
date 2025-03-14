@@ -1,0 +1,78 @@
+# Russian language file for SmartMetro
+
+locale:
+  name: "Русский"
+
+gui:
+  vending_machine:
+    title: "Билетный автомат"
+    info: "Информация"
+    current_station: "Текущая станция: %s"
+    click_to_get: "Нажмите, чтобы получить билет"
+
+ticket:
+  name: "Билет метро"
+  from: "Откуда: %s"
+  to: "Куда: %s"
+  usage: "Щелкните правой кнопкой мыши по рельсам, чтобы использовать"
+  received: "Вы получили билет до %s."
+  inventory_full: "Вы получили билет до %s, но ваш инвентарь полон."
+  invalid: "Этот билет недействителен."
+
+minecart:
+  heading: "Ваша вагонетка направляется к %s."
+
+command:
+  help:
+    title: "=== Команды системы метро ==="
+    create_station: "/metro create station <название> - Создать станцию на вашем месте"
+    create_switch: "/metro create switch <пункт назначения> - Создать переключатель путей на вашем месте"
+    delete_station: "/metro delete station - Удалить ближайшую станцию"
+    delete_switch: "/metro delete switch - Удалить переключатель путей на вашем месте"
+    list: "/metro list - Список всех станций"
+    language: "/metro language <код языка> - Изменить язык"
+    givemachine: "/metro givemachine <ID станции> - Получить билетный автомат, привязанный к указанной станции"
+
+  error:
+    player_only: "Эту команду могут использовать только игроки."
+    no_permission: "У вас нет разрешения на использование этой команды."
+    usage_create: "Использование: /metro create <station|switch> [название]"
+    usage_create_station: "Использование: /metro create station <название>"
+    usage_create_switch: "Использование: /metro create switch <пункт назначения>"
+    usage_delete: "Использование: /metro delete <station|switch>"
+    usage_language: "Использование: /metro language <код языка>"
+    usage_givemachine: "Использование: /metro givemachine <ID станции>"
+    invalid_type: "Неверный тип. Используйте 'station' или 'switch'."
+  
+  language_changed: "Язык успешно изменен."
+  language:
+    available: "Доступные языки:"
+    usage: "Используйте /metro language <код языка> для изменения языка"
+
+station:
+  created: "Станция '%s' создана с ID: %s"
+  deleted: "Станция '%s' удалена."
+  not_found: "Рядом с вами не найдено станций."
+  not_found_id: "Станция с ID '%s' не найдена."
+  list_title: "=== Станции метро ==="
+
+switch:
+  created: "Создан переключатель путей, указывающий на '%s'."
+  deleted: "Переключатель путей удален."
+  not_found: "На вашем месте не найден переключатель путей."
+  destination_not_found: "Станция назначения с ID '%s' не найдена."
+
+vending_machine:
+  name: "Билетный автомат"
+  bound_to: "Привязан к станции: %s"
+  place_instruction: "Разместите рядом со станцией"
+  placed: "Билетный автомат размещен, привязан к станции: %s"
+  given: "Вы получили билетный автомат, привязанный к станции %s"
+  dropped: "Вы получили билетный автомат, привязанный к станции %s, но ваш инвентарь полон"
+  creation_failed: "Не удалось создать билетный автомат"
+
+error:
+  no_station_near_vending: "Ошибка: Рядом с этим билетным автоматом не найдено станций."
+  destination_not_found: "Ошибка: Станция назначения не найдена."
+  invalid_station: "Ошибка: Неверный выбор станции."
+
