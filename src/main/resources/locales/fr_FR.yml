@@ -12,7 +12,7 @@ gui:
     category: "§7Catégorie : §f%s"
 
 ticket:
-  name: "§6§lBillet de métro"
+  name: "§lBillet de métro"
   from: "§7De : §f%s"
   to: "§7À : §f%s"
   usage: "§a§oClic droit sur un rail pour utiliser"
@@ -89,7 +89,7 @@ switch:
   direction_destination_deleted: "§a§lStation §f'%s' §a§lsupprimée de la direction §f'%s'§a§l."
 
 vending_machine:
-  name: "§6§lDistributeur de billets"
+  name: "Distributeur de billets"
   bound_to: "§7Lié à la station : §f%s"
   category: "§7Catégorie : §f%s"
   place_instruction: "§a§oPlacez-le près d'une station"

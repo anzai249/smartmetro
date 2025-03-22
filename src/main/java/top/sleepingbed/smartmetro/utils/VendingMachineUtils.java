@@ -58,8 +58,9 @@ public class VendingMachineUtils {
                 meta.setDisplayName("§6" + ticketName + " - " + station.getName());
                 
                 List<String> lore = new ArrayList<>();
+                String categoryMsg = plugin.getLocaleManager().getMessage(locale, "vending_machine.category");
                 lore.add("§7" + plugin.getLocaleManager().getMessage(locale, "gui.vending_machine.click_to_get"));
-                lore.add("§7" + plugin.getLocaleManager().getMessage(locale, "gui.vending_machine.category") + ": " + station.getCategory());
+                lore.add("§7" + String.format(categoryMsg, currentStation.getCategory()));
                 meta.setLore(lore);
                 
                 stationItem.setItemMeta(meta);
@@ -77,8 +78,9 @@ public class VendingMachineUtils {
             
             List<String> lore = new ArrayList<>();
             String currentStationMsg = plugin.getLocaleManager().getMessage(locale, "gui.vending_machine.current_station");
+            String categoryMsg = plugin.getLocaleManager().getMessage(locale, "vending_machine.category");
             lore.add("§7" + String.format(currentStationMsg, currentStation.getName()));
-            lore.add("§7" + plugin.getLocaleManager().getMessage(locale, "gui.vending_machine.category") + ": " + currentStation.getCategory());
+            lore.add("§7" + String.format(categoryMsg, currentStation.getCategory()));
             infoMeta.setLore(lore);
             
             infoItem.setItemMeta(infoMeta);
@@ -94,7 +96,6 @@ public class VendingMachineUtils {
         
         Station fromStation = plugin.getStationManager().getStation(fromStationId);
         Station toStation = plugin.getStationManager().getStation(toStationId);
-        
         if (fromStation == null || toStation == null) {
             String errorMsg = plugin.getLocaleManager().getMessage(locale, "error.invalid_station");
             player.sendMessage("§c" + errorMsg);
@@ -142,8 +143,9 @@ public class VendingMachineUtils {
             // Set lore
             List<String> lore = new ArrayList<>();
             String boundToMsg = plugin.getLocaleManager().getMessage(locale, "vending_machine.bound_to");
+            String categoryMsg = plugin.getLocaleManager().getMessage(locale, "vending_machine.category");
             lore.add("§7" + String.format(boundToMsg, station.getName()));
-            lore.add("§7" + plugin.getLocaleManager().getMessage(locale, "vending_machine.category") + ": " + station.getCategory());
+            lore.add("§7" + String.format(categoryMsg, station.getCategory()));
             lore.add("§7" + plugin.getLocaleManager().getMessage(locale, "vending_machine.place_instruction"));
             meta.setLore(lore);
             

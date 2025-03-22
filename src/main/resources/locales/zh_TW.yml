@@ -12,7 +12,7 @@ gui:
     category: "§7類別: §f%s"
 
 ticket:
-  name: "§6§l地鐵票"
+  name: "§l地鐵票"
   from: "§7出發站: §f%s"
   to: "§7目的站: §f%s"
   usage: "§a§o右鍵點擊軌道使用"
@@ -27,7 +27,7 @@ minecart:
 
 command:
   help:
-    title: "§6§l=== 地鐵���統命令 ==="
+    title: "§6§l=== 地鐵系統命令 ==="
     create_station: "§e/metro create station <名稱> [類別] §7- 在你的位置創建一個站點"
     create_switch: "§e/metro create switch <方向> <目的地> §7- 在你的位置創建一個軌道開關"
     delete_station: "§e/metro delete station §7- 刪除你位置附近的站點"
@@ -89,7 +89,7 @@ switch:
   direction_destination_deleted: "§a§l已從方向 §f'%s' §a§l移除站點 §f'%s'§a§l。"
 
 vending_machine:
-  name: "§6§l售票機"
+  name: "售票機"
   bound_to: "§7綁定到站點: §f%s"
   category: "§7類別: §f%s"
   place_instruction: "§a§o放置在站點附近"

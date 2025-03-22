@@ -23,6 +23,8 @@ import top.sleepingbed.smartmetro.models.Station;
 
 import java.util.*;
 
+import static org.bukkit.Bukkit.getLogger;
+
 public class MinecartListener implements Listener {
     
     private final SmartMetro plugin;
@@ -220,26 +222,31 @@ public class MinecartListener implements Listener {
                     public void run() {
                         switchedMinecarts.remove(cartId);
                     }
-                }.runTaskLater(plugin, 40L); // 20 ticks = 1 秒
+                }.runTaskLater(plugin, 10L); // 20 ticks = 1 秒
             }
         }
     }
 
     private String findExitDirectionForDestination(TrackSwitch trackSwitch, String entryDirection, String destinationId) {
         // 檢查每個方向的目標站點
-        for (Map.Entry<String, List<String>> entry : trackSwitch.getDirectionDestinations().entrySet()) {
-            String direction = entry.getKey();
-            List<String> stationIds = entry.getValue(); // 修正此處，將 stationId 改為 stationIds (List)
+//        for (Map.Entry<String, List<String>> entry : trackSwitch.getDirectionDestinations().entrySet()) {
+//            String direction = entry.getKey();
+//            List<String> stationIds = entry.getValue(); // 修正此處，將 stationId 改為 stationIds (List)
+//
+//            // 跳過入口方向（不能往回走）
+//            if (direction.equals(TrackSwitch.getOppositeDirection(entryDirection))) {
+//                continue;
+//            }
+//
+//            // 如果此方向包含目標站點，則選擇這個方向
+//            if (stationIds.contains(destinationId)) { // 修正此處，檢查 List 是否包含目標站點
+//                return direction;
+//            }
+//        }
 
-            // 跳過入口方向（不能往回走）
-            if (direction.equals(TrackSwitch.getOppositeDirection(entryDirection))) {
-                continue;
-            }
-
-            // 如果此方向包含目標站點，則選擇這個方向
-            if (stationIds.contains(destinationId)) { // 修正此處，檢查 List 是否包含目標站點
-                return direction;
-            }
+        String directionToFind = trackSwitch.getDirectionForDestination(destinationId);
+        if (directionToFind != null) {
+            return directionToFind;
         }
 
         // 如果沒有找到特定的方向，則嘗試直行（如果可能）
@@ -268,7 +275,7 @@ public class MinecartListener implements Listener {
             return velocity.getX() > 0 ? "west" : "east"; // Opposite because we want where it's coming FROM
         } else {
             // Moving primarily north-south
-            return velocity.getZ() > 0 ? "south" : "north"; // Opposite because we want where it's coming FROM
+            return velocity.getZ() > 0 ? "north" : "south"; // Opposite because we want where it's coming FROM
         }
     }
     

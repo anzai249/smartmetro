@@ -12,7 +12,7 @@ gui:
     category: "§7类别: §f%s"
 
 ticket:
-  name: "§6§l地铁票"
+  name: "§l地铁票"
   from: "§7出发站: §f%s"
   to: "§7目的站: §f%s"
   usage: "§a§o右键点击轨道使用"
@@ -89,7 +89,7 @@ switch:
   direction_destination_deleted: "§a§l已从方向 §f'%s' §a§l移除站点 §f'%s'§a§l。"
 
 vending_machine:
-  name: "§6§l售票机"
+  name: "售票机"
   bound_to: "§7绑定到站点: §f%s"
   category: "§7类别: §f%s"
   place_instruction: "§a§o放置在站点附近"

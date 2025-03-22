@@ -12,7 +12,7 @@ gui:
     category: "§7カテゴリー: §f%s"
 
 ticket:
-  name: "§6§l地下鉄切符"
+  name: "§l地下鉄切符"
   from: "§7出発駅: §f%s"
   to: "§7目的駅: §f%s"
   usage: "§a§oレールを右クリックして使用"
@@ -89,7 +89,7 @@ switch:
   direction_destination_deleted: "§a§l方向 §f'%s' §a§lから駅 §f'%s' §a§lを削除しました。"
 
 vending_machine:
-  name: "§6§l券売機"
+  name: "券売機"
   bound_to: "§7紐づけられた駅: §f%s"
   category: "§7カテゴリー: §f%s"
   place_instruction: "§a§o駅の近くに設置してください"

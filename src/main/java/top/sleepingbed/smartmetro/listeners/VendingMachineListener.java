@@ -176,6 +176,7 @@ public class VendingMachineListener implements Listener {
             return;
         }
 
+
         String destinationName = itemName.substring(ticketName.length()); // Remove prefix
 
         // Find the destination station by name

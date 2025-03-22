@@ -12,7 +12,7 @@ gui:
     category: "§7Kategorie: §f%s"
 
 ticket:
-  name: "§6§lU-Bahn-Ticket"
+  name: "§lU-Bahn-Ticket"
   from: "§7Von: §f%s"
   to: "§7Nach: §f%s"
   usage: "§a§oRechtsklick auf eine Schiene zum Benutzen"
@@ -89,7 +89,7 @@ switch:
   direction_destination_deleted: "§a§lStation §f'%s' §a§lvon Richtung §f'%s' §a§lentfernt."
 
 vending_machine:
-  name: "§6§lFahrkartenautomat"
+  name: "Fahrkartenautomat"
   bound_to: "§7Gebunden an Station: §f%s"
   category: "§7Kategorie: §f%s"
   place_instruction: "§a§oIn der Nähe einer Station platzieren"

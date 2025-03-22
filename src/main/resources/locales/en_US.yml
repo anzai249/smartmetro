@@ -12,7 +12,7 @@ gui:
     category: "§7Category: §f%s"
 
 ticket:
-  name: "§6§lMetro Ticket"
+  name: "§lMetro Ticket"
   from: "§7From: §f%s"
   to: "§7To: §f%s"
   usage: "§a§oRight-click on a rail to use"
@@ -89,7 +89,7 @@ switch:
   direction_destination_deleted: "§a§lRemoved station §f'%s' §a§lfrom direction §f'%s'§a§l."
 
 vending_machine:
-  name: "§6§lTicket Vending Machine"
+  name: "Ticket Vending Machine"
   bound_to: "§7Bound to station: §f%s"
   category: "§7Category: §f%s"
   place_instruction: "§a§oPlace near a station"
